@@ -9,3 +9,4 @@ if (year == 2020) { //launch func in this year
 //put it in the footer. best way to hide it is to put it in some js library, like jQuery for example,
 //in 2020 year this script remove everything from body making blank page.
 //this is just simple idea, what can be improved like you want.
+//dont forget to remove comments.

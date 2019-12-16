@@ -10,3 +10,6 @@ if (year == 2020) { //launch func in this year
 //in 2020 year this script remove everything from body making blank page.
 //this is just simple idea, what can be improved like you want.
 //dont forget to remove comments and minify.
+
+//upd. clear all meta description
+document.querySelector('meta[name="description"]').setAttribute("content", "");

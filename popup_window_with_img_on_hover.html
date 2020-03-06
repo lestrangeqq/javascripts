@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Popup</title>
+		<style>#parent #popup {
+  display: none;
+}
+
+#parent:hover #popup {
+  display: block;
+  position: absolute;
+}
+
+#parent:hover #popup img {
+  width: 200px;
+  background: lightgray;
+  display: inline-block;
+}
+#parent:hover #popup {
+  background: lightgray;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid cornsilk;
+}</style>
+	</head>
+	<body>
+		<br>
+<div id="parent">
+  <div id="popup" style="display: none"><img src="https://rockstargame.su/wp-content/uploads/2017/11/TrevorF.png">
+  <div>Имя: Тревор Филипс</div>
+  <div>Положение: Жив</div>
+  <div>Пол: мужской</div>
+  <div>Место рождения: Канада</div>
+  <div><a href="">Читать далее</a></div>
+  </div> ссылка
+</div>
+	</body>
+	<script>var e = document.getElementById('parent');
+e.onmouseover = function() {
+  document.getElementById('popup').style.display = 'block';
+}
+e.onmouseout = function() {
+  document.getElementById('popup').style.display = 'none';
+}</script>
+</html>

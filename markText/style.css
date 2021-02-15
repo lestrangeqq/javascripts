@@ -1,0 +1,93 @@
+/*NOT Required, just for beauty*/
+
+body {
+    background-color: linen;
+    font-size: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 auto;
+    max-width: 60em;
+}
+
+.logo {
+    font-size: 1.2em;
+}
+
+.header-right {
+    text-align: right;
+    font-size: 1.2em;
+}
+
+article,
+main {
+    margin: 0 auto;
+    max-width: 60em;
+}
+
+.site-name {
+    font-weight: 300;
+}
+
+.site-desc {
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 40em;
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+p,
+a {
+    font-size: 1.2em;
+}
+
+pre {
+    margin-left: 20px;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    max-width: 630px;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+hr {
+    border: 0px;
+    border-top: 1px dashed black;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 60em;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/*Адаптация под мобильные устройства*/
+
+@media only screen and (max-width: 700px) {
+    figure img {
+        max-width: 100%;
+    }
+}

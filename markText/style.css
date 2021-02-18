@@ -1,47 +1,13 @@
-/*NOT Required, just for beauty*/
-
 body {
     background-color: linen;
     font-size: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    margin: 0 auto;
-    max-width: 60em;
-}
-
-.logo {
-    font-size: 1.2em;
-}
-
-.header-right {
-    text-align: right;
-    font-size: 1.2em;
-}
-
 article,
 main {
     margin: 0 auto;
     max-width: 60em;
-}
-
-.site-name {
-    font-weight: 300;
-}
-
-.site-desc {
-    font-style: italic;
-    font-size: 1.1em;
-}
-
-.services {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 40em;
-    margin-top: 40px;
 }
 
 h1 {
@@ -51,22 +17,6 @@ h1 {
 p,
 a {
     font-size: 1.2em;
-}
-
-pre {
-    margin-left: 20px;
-}
-
-figure {
-    text-align: center;
-}
-
-figure img {
-    max-width: 630px;
-}
-
-figcaption {
-    font-style: italic;
 }
 
 hr {
@@ -83,11 +33,48 @@ footer {
     padding: 20px;
 }
 
+button {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background: #fff;
+}
 
-/*Адаптация под мобильные устройства*/
+button {
+    display: inline-block;
+    border: solid 1px #000;
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: red;
+}
 
-@media only screen and (max-width: 700px) {
-    figure img {
-        max-width: 100%;
-    }
+mark {
+    background: orange
+}
+
+#mark-wrap {
+    display: none;
+    position: fixed;
+    bottom: 1px;
+    right: 5px;
+    padding: 5px;
+    min-width: 15em;
+    max-width: 20em;
+    max-height: 20em;
+    background: #242424;
+    color: white;
+    overflow-y: auto;
+}
+
+.hidden-list {
+    display: none;
+}
+
+#num-of-marks {
+    background: white;
+    color: black;
+    font-size: 0.8em;
+    border-radius: 50px;
+    padding: 0px 5px;
 }

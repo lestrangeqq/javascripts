@@ -12,19 +12,20 @@ const MARKNUMS = document.getElementById('num-of-marks');
 let numOfMarks = 0;
 
 function makeBold() {
-    var selection = window.getSelection().getRangeAt(0);
-    var selectedText = selection.extractContents();
-    var newNode = document.createElement('mark');
-    newNode.appendChild(selectedText);
-    selection.insertNode(newNode);
-    $('button').fadeOut();
-    $('#mark-wrap').fadeIn(500);
-    TEXTARRAY.push(newNode.innerHTML);
-    MARKLIST.innerHTML = '<ol>' + TEXTARRAY.join('<li>') + '</ol>';
-    MARKNUMS.innerHTML = ++numOfMarks;
+    var selection = window.getSelection();
+    if (selection.rangeCount) {
+        var range = selection.getRangeAt(0).cloneRange();
+        var newNode = document.createElement("mark");
+        range.surroundContents(newNode);
+        selection.removeAllRanges();
+        //  selection.addRange(range);
+        $('button').fadeOut();
+        $('#mark-wrap').fadeIn(500);
+        TEXTARRAY.push(newNode.innerHTML);
+        MARKLIST.innerHTML = '<ol>' + TEXTARRAY.join('<li>') + '</ol>';
+        MARKNUMS.innerHTML = ++numOfMarks;
+    }
 }
-
-document.getElementById('clickFunc').addEventListener('click', makeBold);
 
 function openMarkList() {
     OPENLIST.classList.toggle('list-clicked');
@@ -53,10 +54,6 @@ var pageY;
 $(document).ready(function() {
     $(document).bind("mouseup", function() {
         var selectedText = x.Selector.getSelected();
-
-        /*  let yy = selectedText.anchorNode.parentElement;
-          console.log(typeof yy)*/
-
         if (selectedText != '') {
             $('button').css({
                 'left': pageX + 5,

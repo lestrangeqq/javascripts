@@ -58,17 +58,32 @@ mark {
     position: fixed;
     bottom: 1px;
     right: 5px;
-    padding: 5px;
     min-width: 15em;
     max-width: 20em;
     max-height: 20em;
     background: #242424;
     color: white;
     overflow-y: auto;
+    border: 1px solid #242424;
 }
 
 .hidden-list {
     display: none;
+}
+
+#list-header {
+    margin: 10px;
+}
+
+#mark-list {
+    background: white;
+    color: black;
+}
+
+#mark-list ol {
+    margin-bottom: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #num-of-marks {
@@ -76,5 +91,5 @@ mark {
     color: black;
     font-size: 0.8em;
     border-radius: 50px;
-    padding: 0px 5px;
+    padding: 2px 7px;
 }

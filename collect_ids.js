@@ -4,5 +4,5 @@
 let x = document.querySelectorAll('.questions');
 
 for (i = 0; i < x.length; i++) {
-	document.write(x[i].id);
+	document.write(x[i].id + '<br>');
 }
